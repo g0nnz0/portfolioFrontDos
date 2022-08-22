@@ -1,0 +1,278 @@
+<!--En este index4 voy a rehacer lo que hice en el 3 pero con bootstrap en la mayoria de las cosas-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Portfolio con html, css, boots y js 4</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style4.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container-fluid">
+        <nav id="header-nav">
+          <h1 id="header-nav-titulo">Gonzalo Barrionuevo</h1>
+
+          <ul>
+            <li>
+              <a
+                class="header-uluno-li"
+                id="header-nav-btn"
+                href="https://es.wikipedia.org/wiki/Login"
+                target="_blank"
+                >Login</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="header-uluno-li"
+                href="https://es-la.facebook.com/"
+                target="_blank"
+              >
+                <img
+                  class="redes"
+                  src="images/faceicon.png"
+                  alt="Icono Facebook"
+              /></a>
+            </li>
+
+            <li>
+              <a
+                class="header-uluno-li"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <img
+                  class="redes"
+                  src="images/instaicon.png"
+                  alt="Icono Instagram"
+              /></a>
+            </li>
+
+            <li>
+              <a
+                class="header-uluno-li"
+                href="https://www.youtube.com/watch?v=V4Pr-QoNLG4"
+                target="_blank"
+              >
+                <img
+                  class="redes"
+                  src="images/youtubeicon.png"
+                  alt="Icono Youtube"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container-fluid">
+        <img
+          id="header-portada"
+          src="images/portadagrande.png"
+          alt="dibujo mio"
+        />
+
+        <img
+          id="header-fotoperfil"
+          src="images/fotoperfil.png"
+          alt="foto perfil"
+        />
+      </div>
+
+      <nav id="header-nav-perfil">
+        <h2>Gonzalo Barrionuevo</h2>
+        <div class="container-fluid">
+          <p>
+            Estudiante en
+            <a
+              href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
+              target="_blank"
+              >Argentina Programa</a
+            >
+          </p>
+          <p>Buenos Aires (Argentina) <a href="">Información de Contacto</a></p>
+
+          <a
+            class="btn btn-primary"
+            href="https://am2r-another-metroid-2-remake.uptodown.com/windows"
+            role="button"
+            target="_blank"
+            >Videojuegos</a
+          >
+          <a
+            class="btn btn-primary"
+            href="https://www.youtube.com/watch?v=-DAeR-OyabY"
+            role="button"
+            target="_blank"
+            >Música</a
+          >
+          <a
+            class="btn btn-primary"
+            href="https://www.youtube.com/watch?v=ByYvT-p4taI"
+            role="button"
+            target="_blank"
+            >Más</a
+          >
+          <!--Botonera que hice sin boostrap
+          <ul id="header-navdos-ul">
+            <li>
+              <a
+                class="menuPerfil header-menu-btn"
+                href="https://am2r-another-metroid-2-remake.uptodown.com/windows"
+                target="_blank"
+              >
+                Videojuegos</a
+              >
+            </li>
+            <li>
+              <a
+                class="menuPerfil header-menu-btn"
+                href="https://www.youtube.com/watch?v=-DAeR-OyabY"
+                target="_blank"
+                >Música</a
+              >
+            </li>
+            <li>
+              <a
+                class="menuPerfil header-menu-btn"
+                href="https://www.youtube.com/watch?v=ByYvT-p4taI"
+                target="_blank"
+                >Más</a
+              >
+            </li>
+          </ul>
+          -->
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="pen-uno"
+            id="penuno"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <section class="acercaDe">
+      <h2>Acerca de:</h2>
+      <div class="container-fluid" id="btn-edit" onclick="cambiar_parrafo()">
+        <p id="texto-acercade">Estudiante, que se yo, le pongo pilas.</p>
+        <div>
+          <input
+            type="text"
+            id="edit-acercade"
+            oninput="cambio(this.value)"
+            style="display: none"
+          />
+        </div>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="pen-dos"
+          id="pendos"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <section class="cv">
+      <h2>Experiencia</h2>
+      <div class="container-fluid">
+        <dl>
+          <dt>Backend Developer</dt>
+
+          <dd>Empresa donde lo fuí</dd>
+          <dd>Fecha, localidad, provincia y pais</dd>
+        </dl>
+      </div>
+
+      <h2>Educación</h2>
+      <div class="container-fluid">
+        <dl>
+          <dt>Escuela bla bla</dt>
+
+          <dd>Año</dd>
+          <dd>Fecha, localidad, provincia y pais</dd>
+
+          <dt>Escuela bla bla</dt>
+
+          <dd>Año</dd>
+          <dd>Fecha, localidad, provincia y pais</dd>
+
+          <dt>Escuela bla bla</dt>
+
+          <dd>Año</dd>
+          <dd>Fecha, localidad, provincia y pais</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Hard Skills & Soft Skills</h2>
+      <div class="container-fluid">
+        <h5>Resolucion de problemas</h5>
+        <p id="barraSkills">Acá iría la barra</p>
+        <h5>Diseño de sistemas</h5>
+        <p id="barraSistemas">Acá iría la barra</p>
+      </div>
+    </section>
+
+    <section class="proyectos">
+      <h2>Proyectos</h2>
+      <div class="container-fluid">
+        <dl>
+          <dt>Proyecto uno</dt>
+          <dd>Aca va la info del proyecto uno.</dd>
+
+          <dt>Proyecto dos</dt>
+          <dd>Aca va la info del proyecto dos.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!--En este footer tengo el ejemplo de la manera mas prolija que encontré para combinar css y bootstrap, todo el div es de bootstrap, y lo metí dentro de un footer, luego en mi style4.css pongo directamente footer{} para darle los estilos, aun parece no quedar del todo centrado, pero está bien-->
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">.col-sm-4</div>
+
+          <div class="col-sm-4">.col-sm-4</div>
+          <div class="col-sm-4">Copyright @2022 all right reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript propio, no entendí como funciona el de bootstrap -->
+    <script src="script4.js"></script>
+  </body>
+</html>

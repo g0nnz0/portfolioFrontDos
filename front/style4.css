@@ -1,0 +1,187 @@
+header {
+  border: solid;
+  border-radius: 15px;
+  border-color: gray;
+}
+
+#header-nav-titulo {
+  padding: 15px 0px 0px 5px;
+  margin: 0px 0px 0px 0px;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  color: rgb(222, 228, 228);
+}
+
+#header-nav {
+  background-image: url("images/navfondo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin-block: 0em;
+  height: 68px;
+}
+
+.header-uluno-li {
+  float: right;
+  margin: 0px 5px 0px 5px;
+}
+
+.redes {
+  width: 55px;
+  height: 55px;
+}
+
+.redes:hover {
+  width: 65px;
+  height: 65px;
+  margin: 0px 0px 0px 0px;
+}
+
+/* Asi se estiliza un boton con css:*/
+#header-nav-btn:link,
+#header-nav-btn:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  margin: 10px 3px 4px 4px;
+}
+
+#header-nav-btn:hover {
+  background-color: powderblue;
+  padding: 13px 23px;
+}
+
+#header-nav-btn:active {
+  background-color: yellowgreen;
+}
+
+#header-portada {
+  width: 1341px;
+  height: 450px;
+  border-radius: 25px 25px 0px 0px;
+  margin-top: 6px;
+  margin-left: 1px;
+}
+
+#header-nav-perfil {
+  padding-left: 25px;
+}
+
+#header-fotoperfil {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: -90px; /*Este margin negativo es considerado una mala practica, pero aun no se como hacer que la imagen se vea encima de la portada sin esto.*/
+}
+
+#header-navdos-ul {
+  padding-left: 0px;
+}
+
+.menuPerfil {
+  float: left;
+  margin: 0px 3px 0px 0px;
+  color: white;
+}
+
+.pen-uno {
+  /*Esta clase la edite de la clase que viene de bootstrap, luego veo como cambiarla con boostrap*/
+  margin: -440px 0px 0px -65px; /*Este margin negativo es considerado una mala practica, pero aun no se como hacer que la imagen se vea encima de la portada sin esto.*/
+}
+
+.btn {
+  /*classe de bootstrap*/
+  padding: 0.25rem 0.75rem;
+  margin-top: -25px;
+}
+
+/*Botones anteriores sin bootstrap
+
+.header-menu-btn:link,
+.header-nav-btn:visited {
+  background-color: #f44336;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  margin: 10px 3px 4px 4px;
+}
+
+.header-menu-btn:hover {
+  background-color: powderblue;
+}
+
+.header-menu-btn:active {
+  background-color: yellowgreen;
+}
+*/
+
+.acercaDe {
+  border: solid;
+  border-radius: 15px;
+  border-color: gray;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.pen-dos {
+  float: right;
+  margin: -77px 10px 0px 0px;
+}
+
+.cv {
+  border: solid;
+  border-radius: 15px;
+  border-color: gray;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.skills {
+  border: solid;
+  border-radius: 15px;
+  border-color: gray;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+#barraSkills {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#barraSistemas {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.proyectos {
+  border: solid;
+  border-radius: 15px;
+  border-color: gray;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+footer {
+  border: solid;
+  border-radius: 15px;
+  border-color: gray;
+  padding-left: 15px;
+  margin-top: 10px;
+}
