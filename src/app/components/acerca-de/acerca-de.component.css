@@ -1,0 +1,60 @@
+.row {
+  padding: 20px;
+}
+
+div {
+  text-align: center;
+}
+
+/*Foto de perfil:*/
+@media (min-width: 576px) {
+  #fotoDePerfil {
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 3%;
+    top: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  #fotoDePerfil {
+    position: absolute;
+    width: 30%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 35%;
+    top: 80%;
+  }
+}
+@media (max-width: 349px) {
+  #fotoDePerfil {
+    position: absolute;
+    width: 30%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 35%;
+    top: 95%;
+  }
+}
+
+/*Nombre Usuario:*/
+@media (min-width: 576px) {
+  #nombre {
+    font-weight: bold;
+    margin-top: 35px;
+  }
+}
+@media (max-width: 575px) {
+  #nombre {
+    font-weight: bold;
+    margin-top: 115px;
+  }
+}
+@media (max-width: 349px) {
+  #nombre {
+    font-weight: bold;
+    margin-top: 35px;
+  }
+}
