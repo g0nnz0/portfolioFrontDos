@@ -1,0 +1,13 @@
+.row {
+  padding: 20px;
+}
+
+.container {
+  width: auto;
+}
+
+.proyecto1,
+.proyecto1imagen {
+  display: inline-block;
+  text-align: justify;
+}
