@@ -18,12 +18,22 @@
         ><img src="../../../assets/githubIcon.png" alt="Icono GitHub"
       /></a>
     </div>
+
     <button
+      *ngIf="isLogged == false"
       type="button"
       class="btn btn-outline-success ingresar"
       (click)="login()"
     >
-      Ingresar
+      Iniciar Sesión
+    </button>
+    <button
+      *ngIf="isLogged == true"
+      type="button"
+      class="btn btn-outline-success ingresar"
+      (click)="logout()"
+    >
+      Cerrar Sesión
     </button>
   </div>
 </div>

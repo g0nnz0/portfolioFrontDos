@@ -11,9 +11,11 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class LoginComponent implements OnInit {
   loginUsuario: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(
+    private formBuilder: FormBuilder,
     private afAuth: AngularFireAuth,
-    private router: Router) {
+    private router: Router
+    ) {
       this.loginUsuario = this.formBuilder.group({
         email: ['', Validators.required],
         password: ['', Validators.required],
@@ -27,7 +29,8 @@ export class LoginComponent implements OnInit {
     const email = this.loginUsuario.value.email;
     const password = this.loginUsuario.value.password;
 
-    this.afAuth.signInWithEmailAndPassword(email, password).then((user) =>{
+    this.afAuth.signInWithEmailAndPassword(email, password)
+      .then((user) =>{
       console.log (user);
       this.router.navigate(['/']);
     }).catch((error) =>{

@@ -33,7 +33,7 @@ import { environment } from 'src/environments/environment';
     ProyectosComponent,
     FooterComponent,
     PortfolioComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
