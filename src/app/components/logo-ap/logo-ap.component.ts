@@ -32,7 +32,7 @@ export class LogoAPComponent implements OnInit {
   }
 
   logout(){
-    this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+    this.afAuth.signOut().then(() => this.router.navigate(['/portfolio']));
 
   }
 

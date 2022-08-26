@@ -19,6 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoginComponent } from './components/login/login.component';
 import { environment } from 'src/environments/environment';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { UltraSecretoComponent } from './components/ultra-secreto/ultra-secreto.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { environment } from 'src/environments/environment';
     FooterComponent,
     PortfolioComponent,
     LoginComponent,
+    Pagina404Component,
+    UltraSecretoComponent,
   ],
   imports: [
     BrowserModule,
