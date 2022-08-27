@@ -58,3 +58,12 @@ div {
     margin-top: 35px;
   }
 }
+
+i {
+  float: right;
+  padding: 5px;
+}
+
+.container-fluid {
+  display: inline-block;
+}
