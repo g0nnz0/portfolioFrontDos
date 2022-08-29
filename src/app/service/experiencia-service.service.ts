@@ -17,7 +17,7 @@ export class ExperienciaServiceService {
   }
 
   public detail(id: number): Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this. expURL + `detail/${id}`);
+    return this.httpClient.get<Experiencia>(this. expURL + `/detail/${id}`);
   }
 
   public save(exp: Experiencia): Observable<any>{
@@ -25,11 +25,11 @@ export class ExperienciaServiceService {
   }
 
   public update(id: number, exp: Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.expURL + `actualizar/${id}`, exp );
+    return this.httpClient.put<any>(this.expURL + `/actualizar/${id}`, exp );
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.expURL + `/borrar/${id}`);
   }
 
 }

@@ -22,6 +22,7 @@ import { environment } from 'src/environments/environment';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { UltraSecretoComponent } from './components/ultra-secreto/ultra-secreto.component';
 import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
+import { EditarExpComponent } from './components/experiencia/editar-exp.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NuevaExperienciaComponent } from './components/experiencia/nueva-experi
     Pagina404Component,
     UltraSecretoComponent,
     NuevaExperienciaComponent,
+    EditarExpComponent,
   ],
   imports: [
     BrowserModule,
