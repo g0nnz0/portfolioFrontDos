@@ -6,3 +6,16 @@ h2,
 h3 {
   display: inline;
 }
+
+.titulo {
+  text-align: center;
+}
+
+.tituloBoton {
+  display: inline-flex;
+}
+
+.nuevo {
+  margin-top: 3px;
+  margin-left: 10px;
+}

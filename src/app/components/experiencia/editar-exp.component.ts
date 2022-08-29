@@ -31,7 +31,8 @@ export class EditarExpComponent implements OnInit {
     const id = this.activateRoute.snapshot.params['id'];
     this.expServ.update(id, this.upExp).subscribe(
       data =>{
-        console.log("Experiencia Editada");
+        console.log("Nombre Experiencia editado, ahora es: " + this.upExp.nombreExp);
+        console.log("Descripción Experiencia editada, ahora es: " + this.upExp.descripcionExp)
         this.router.navigate(['']);
       }, err =>{
         alert("Error al modificar experiencia");
