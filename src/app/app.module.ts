@@ -23,6 +23,8 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { UltraSecretoComponent } from './components/ultra-secreto/ultra-secreto.component';
 import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
 import { EditarExpComponent } from './components/experiencia/editar-exp.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
+import { EditarEduComponent } from './components/educacion/editar-edu.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { EditarExpComponent } from './components/experiencia/editar-exp.componen
     UltraSecretoComponent,
     NuevaExperienciaComponent,
     EditarExpComponent,
+    NuevaEducacionComponent,
+    EditarEduComponent,
   ],
   imports: [
     BrowserModule,

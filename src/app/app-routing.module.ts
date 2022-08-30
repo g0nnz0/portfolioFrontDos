@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditarEduComponent } from './components/educacion/editar-edu.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
 import { EditarExpComponent } from './components/experiencia/editar-exp.component';
 import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'nuevaexp', component: NuevaExperienciaComponent},
   {path:'editarexp/:id', component: EditarExpComponent},
+  {path:'nuevaedu', component: NuevaEducacionComponent},
+  {path:'editaredu/:id', component: EditarEduComponent},
   {path:'ultraSecreto', component: UltraSecretoComponent, canActivate: [AuthGuard]},
   {path:'**', component: Pagina404Component}
 ];

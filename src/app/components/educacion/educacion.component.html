@@ -1,49 +1,53 @@
 <div class="row">
-  <h1>Educacion</h1>
+  <div class="container tituloBoton">
+    <h1>Educación</h1>
+    <div class="col-lg-2">
+      <button
+        class="btn btn-primary nuevo"
+        routerLink="/nuevaedu"
+        *ngIf="isLogged"
+      >
+        Nueva Educación
+      </button>
+    </div>
+  </div>
+
+  <div class="col-lg-1"></div>
   <div class="col-lg-11">
-    <ul>
-      <li>
-        <h2>Estudio 1</h2>
-        -
-        <h3>(Años)</h3>
-      </li>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
-      </p>
-      <li>
-        <h2>Estudio 2</h2>
-        -
-        <h3>(Años)</h3>
-      </li>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
-      </p>
-      <li>
-        <h2>Estudio 3</h2>
-        -
-        <h3>(Años)</h3>
-      </li>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
-      </p>
-    </ul>
+    <table class="table">
+      <tbody>
+        <td class="titulo"><h2>Institución</h2></td>
+        <td class="titulo"><h2>Descripción</h2></td>
+        <td></td>
+        <td></td>
+        <tr *ngFor="let Educacion of edu">
+          <td>
+            <h4>{{ Educacion.nombreEdu }} - {{ Educacion.periodoEdu }}</h4>
+          </td>
+          <td>
+            <h6>{{ Educacion.descripcionEdu }}</h6>
+          </td>
+
+          <td *ngIf="isLogged">
+            <button
+              type="button"
+              class="btn"
+              routerLink="/editaredu/{{ Educacion.id }}"
+            >
+              <i class="bi bi-pen-fill"></i>
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button
+              type="button"
+              class="btn"
+              (click)="borrarEducacion(Educacion.id)"
+            >
+              <i class="bi bi-trash2-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
