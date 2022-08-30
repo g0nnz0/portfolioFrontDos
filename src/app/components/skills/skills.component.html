@@ -1,9 +1,91 @@
 <div class="row">
+  <div class="container tituloBoton">
+    <h1>Hard Skills</h1>
+    <div class="col-lg-2">
+      <button
+        class="btn btn-primary nuevo"
+        routerLink="/nuevaskills"
+        *ngIf="isLogged"
+      >
+        Nueva Skill
+      </button>
+    </div>
+  </div>
+  <table class="table">
+    <tbody>
+      <td></td>
+      <td></td>
+      <tr *ngFor="let Skills of skill">
+        <td>
+          <button
+            *ngIf="isLogged"
+            type="button"
+            class="btn"
+            routerLink="/editarskills/{{ Skills.id }}"
+          >
+            <i class="bi bi-pen-fill"></i>
+          </button>
+          <button
+            *ngIf="isLogged"
+            type="button"
+            class="btn"
+            (click)="borrarSkills(Skills.id)"
+          >
+            <i class="bi bi-trash2-fill"></i>
+          </button>
+
+          <circle-progress
+            [percent]="Skills.porcentajeSkill"
+            [radius]="100"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [showUnits]="false"
+            [imageSrc]="'../../../assets/htmlIcon.png'"
+            [showImage]="false"
+            [imageWidth]="80"
+            [imageHeight]="80"
+            [title]="Skills.nombreSkill"
+            [showSubtitle]="false"
+            [animation]="true"
+            [animationDuration]="700"
+          ></circle-progress>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!--
+
+<div *ngFor="let Skills of skill" class="row">
   <h1>Hard Skills</h1>
+  <div class="col-lg-2">
+    <button
+      class="btn btn-primary nuevo"
+      routerLink="/nuevaskills"
+      *ngIf="isLogged"
+    >
+      Nueva Skills
+    </button>
+  </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <button type="button" class="btn" routerLink="/editarskills">
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
       <circle-progress
-        [percent]="85"
+        [percent]="55"
         [radius]="100"
         [outerStrokeWidth]="16"
         [innerStrokeWidth]="8"
@@ -22,156 +104,269 @@
     </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/cssIcon.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [title]="'CSS'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="45"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/cssIcon.png'"
+        [showImage]="true"
+        [imageWidth]="80"
+        [imageHeight]="80"
+        [title]="'CSS'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/jsIcon.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [title]="'JavaScript'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="35"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/jsIcon.png'"
+        [showImage]="true"
+        [imageWidth]="80"
+        [imageHeight]="80"
+        [title]="'JavaScript'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/angularIcon.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [title]="'Angular'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="35"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/angularIcon.png'"
+        [showImage]="true"
+        [imageWidth]="80"
+        [imageHeight]="80"
+        [title]="'Angular'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/githubIcon.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [title]="'Java'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="25"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/githubIcon.png'"
+        [showImage]="true"
+        [imageWidth]="80"
+        [imageHeight]="80"
+        [title]="'Java'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/mysqlIcon.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [title]="'MySql'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="25"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/mysqlIcon.png'"
+        [showImage]="true"
+        [imageWidth]="80"
+        [imageHeight]="80"
+        [title]="'MySql'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <h1>Soft Skills</h1>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#FF7051'"
-      [innerStrokeColor]="'#FC846A'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/idiomaIcon.png'"
-      [showImage]="true"
-      [imageWidth]="115"
-      [imageHeight]="115"
-      [title]="'HTML'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="90"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#FF7051'"
+        [innerStrokeColor]="'#FC846A'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/idiomaIcon.png'"
+        [showImage]="true"
+        [imageWidth]="115"
+        [imageHeight]="115"
+        [title]="'INGLES'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#FF7051'"
-      [innerStrokeColor]="'#FC846A'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/equipoIcon.png'"
-      [showImage]="true"
-      [imageWidth]="120"
-      [imageHeight]="120"
-      [title]="'CSS'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="85"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#FF7051'"
+        [innerStrokeColor]="'#FC846A'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/equipoIcon.png'"
+        [showImage]="true"
+        [imageWidth]="120"
+        [imageHeight]="120"
+        [title]="'TEAM WORK'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#FF7051'"
-      [innerStrokeColor]="'#FC846A'"
-      [showUnits]="false"
-      [imageSrc]="'../../../assets/creatividadIcon.png'"
-      [showImage]="true"
-      [imageWidth]="130"
-      [imageHeight]="130"
-      [title]="'JavaScript'"
-      [showSubtitle]="false"
-      [animation]="true"
-      [animationDuration]="700"
-    ></circle-progress>
+    <button
+      *ngIf="isLogged"
+      type="button"
+      class="btn"
+      (click)="borrarSkills(Skills.id)"
+    >
+      <i class="bi bi-trash2-fill"></i>
+    </button>
+    <button
+      type="button"
+      class="btn"
+      routerLink="/editarskills/{{ Skills.id }}"
+    >
+      <circle-progress
+        [percent]="75"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#FF7051'"
+        [innerStrokeColor]="'#FC846A'"
+        [showUnits]="false"
+        [imageSrc]="'../../../assets/creatividadIcon.png'"
+        [showImage]="true"
+        [imageWidth]="130"
+        [imageHeight]="130"
+        [title]="'CREATIVIDAD'"
+        [showSubtitle]="false"
+        [animation]="true"
+        [animationDuration]="700"
+      ></circle-progress>
+    </button>
   </div>
 </div>
+--></div>
