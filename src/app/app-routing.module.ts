@@ -7,6 +7,8 @@ import { NuevaExperienciaComponent } from './components/experiencia/nueva-experi
 import { LoginComponent } from './components/login/login.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
 import { EditarSkillsComponent } from './components/skills/editar-skills.component';
 import { NuevaSkillsComponent } from './components/skills/nueva-skills.component';
 import { UltraSecretoComponent } from './components/ultra-secreto/ultra-secreto.component';
@@ -20,8 +22,10 @@ const routes: Routes = [
   {path:'editarexp/:id', component: EditarExpComponent},
   {path:'nuevaedu', component: NuevaEducacionComponent},
   {path:'editaredu/:id', component: EditarEduComponent},
-  {path:'editarskills/:id', component: EditarSkillsComponent},
   {path:'nuevaskills', component: NuevaSkillsComponent},
+  {path:'editarskills/:id', component: EditarSkillsComponent},
+  {path:'nuevopro', component: NuevoProyectoComponent},
+  {path:'editarpro/:id', component: EditarProyectoComponent},
   {path:'ultraSecreto', component: UltraSecretoComponent, canActivate: [AuthGuard]},
   {path:'**', component: Pagina404Component}
 ];

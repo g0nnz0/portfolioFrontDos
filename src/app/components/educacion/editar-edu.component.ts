@@ -29,7 +29,8 @@ export class EditarEduComponent implements OnInit {
   actualizarEducacion(): void{
     const id = this.activatedRoute.snapshot.params['id'];
     this.eduServ.update(id, this.upEdu).subscribe(data =>{
-      console.log("Nombre Educació editado, ahora es: " + this.upEdu.nombreEdu);
+      alert("Educación Eliminada.")
+      console.log("Nombre Educación editado, ahora es: " + this.upEdu.nombreEdu);
       console.log("Descripción Educación editada, ahora es: " + this.upEdu.descripcionEdu);
       console.log("Período Educación editada, ahora es: " + this.upEdu.periodoEdu);
         this.router.navigate(['']);

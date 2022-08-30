@@ -8,6 +8,10 @@
   width: auto;
 }
 
+.proyectoTitulobotones {
+  display: flex;
+}
+
 .tituloBoton {
   display: inline-flex;
 }
