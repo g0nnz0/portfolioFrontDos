@@ -4,12 +4,20 @@
   align-items: center;
 }
 
+@media (max-width: 575px) {
+  .container {
+    display: inline-grid;
+    justify-items: center;
+    margin-left: 100px;
+  }
+}
+
 #logoAP {
   width: 200px;
 }
 
 .redes {
-  padding-right: 75px;
+  display: inline-flex;
 }
 
 img {
