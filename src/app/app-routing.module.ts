@@ -11,7 +11,6 @@ import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.
 import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
 import { EditarSkillsComponent } from './components/skills/editar-skills.component';
 import { NuevaSkillsComponent } from './components/skills/nueva-skills.component';
-import { UltraSecretoComponent } from './components/ultra-secreto/ultra-secreto.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -26,7 +25,6 @@ const routes: Routes = [
   {path:'editarskills/:id', component: EditarSkillsComponent, canActivate: [AuthGuard]},
   {path:'nuevopro', component: NuevoProyectoComponent, canActivate: [AuthGuard]},
   {path:'editarpro/:id', component: EditarProyectoComponent, canActivate: [AuthGuard]},
-  {path:'ultraSecreto', component: UltraSecretoComponent, canActivate: [AuthGuard]},
   {path:'**', component: Pagina404Component}
 ];
 
